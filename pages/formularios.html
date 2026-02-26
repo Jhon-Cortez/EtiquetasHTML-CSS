@@ -1,0 +1,151 @@
+<h3>Formularios</h3>
+<p>En HTML los formularios sirven para recoger informacion del usuario y enviarla o procesarla. Esta sección va dirigida a los formularios, cada uno con su respectiva explicación</p>
+
+<ul>
+    <li>
+        <div class="example">
+            form: agrupar campos y enviar datos.
+        </div>
+    </li>
+
+    <li>
+        <div class="example">label: poner el nombre del campo y enlazarlo al input.</div>
+    </li>
+    <li>
+        <div class="example">input: capturar datos del usuario.</div>
+    </li>
+    <li>
+        <div class="example">textarea: escribir texto largo.</div>
+    </li>
+    <li>
+        <div class="example">select: escoger una opción de una lista.</div>
+    </li>
+    <li>
+        <div class="example">option: definir cada opción dentro del select.</div>
+    </li>
+    <li>
+        <div class="example">button: crear un botón. </div>
+    </li>
+    <li>
+        <div class="example">fieldset: agrupar campos relacionados.</div>
+    </li>
+    <li>
+        <div class="example">legend: poner el título del fieldset.</div>
+    </li>
+
+    <p>Input recomendados</p>
+
+
+    <li>
+        <div class="example">text: sirve para escribirtexto normal</div>
+    </li>
+    <li>
+        <div class="example">email: sirve para ingresar un correo y valida un formato básico</div>
+    </li>
+
+    <li>
+        <div class="example">password: sirve para contraseñas, el texto se oculta con puntos o asteriscos</div>
+    </li>
+
+    <li>
+        <div class="example">number: sirve para números; permite límites con min y max</div>
+    </li>
+
+    <li>
+        <div class="example">date: sirve para seleccionar una fecha con calendario</div>
+    </li>
+
+    <li>
+        <div class="example">radio: sirve para escoger una sola opción entre varias</div>
+    </li>
+
+    <li>
+        <div class="example">checkbox: sirve para marcar opciones</div>
+    </li>
+
+    <li>
+        <div class="example">file: sirve para subir archivos</div>
+    </li>
+
+    <li>
+        <div class="example">submit: sirve para enviar el formulario</div>
+    </li>
+
+</ul>
+
+
+<form action="/enviar" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Datos básicos</legend>
+
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" value="Brayan" required>
+
+        <br><br>
+
+        <label for="correo">Correo</label>
+        <input id="correo" name="correo" type="email" value="brayan@gmail.com" required>
+
+        <br><br>
+
+        <label for="clave">Contraseña</label>
+        <input id="clave" name="clave" type="password" value="123456" required>
+
+        <br><br>
+
+        <label for="edad">Edad</label>
+        <input id="edad" name="edad" type="number" value="19" min="1" max="120">
+
+        <br><br>
+
+        <label for="fecha">Fecha de nacimiento</label>
+        <input id="fecha" name="fecha_nacimiento" type="date" value="2006-05-12">
+
+        <hr>
+
+        <label>Género</label>
+        <br>
+        <label><input type="radio" name="genero" value="m" checked> Masculino</label>
+        <br>
+        <label><input type="radio" name="genero" value="f"> Femenino</label>
+
+        <hr>
+
+        <label>Intereses</label>
+        <br>
+        <label><input type="checkbox" name="intereses" value="programacion" checked> Programación</label>
+        <br>
+        <label><input type="checkbox" name="intereses" value="diseno"> Diseño</label>
+
+        <hr>
+
+        <label for="ciudad">Ciudad</label>
+        <select id="ciudad" name="ciudad" required>
+            <option value="">Seleccione...</option>
+            <option value="bogota">Bogotá</option>
+            <option value="medellin" selected>Medellín</option>
+            <option value="cali">Cali</option>
+        </select>
+
+        <br><br>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4">Hola, este es mi mensaje.</textarea>
+
+        <hr>
+
+        <label for="archivo">Subir archivo</label>
+        <input id="archivo" name="archivo" type="file" accept=".pdf,.jpg,.png">
+
+        <hr>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+
+
+        <!-- <input type="submit" value="Enviar"> -->
+
+    </fieldset>
+</form>
+
