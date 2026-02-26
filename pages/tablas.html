@@ -1,7 +1,10 @@
 <h3>Tablas</h3>
-<p>Las tablas en HTML sirven para organizar datos en filas y columnas, se usa la etiqueta table <br> Se usan etiquetas tr que es para definir los encabezados y etoquetas td que es para definir los campos con los datos</p>
+<p>Las tablas en HTML sirven para organizar datos en filas y columnas</p>
 
-<ul>
+<ul class="doc-list">
+    <li>table: Se usa para hacer saber que hay inicia la tabla</li>
+    <li>tr: Es la etiqueta que define los encabezados que tendra la tabla</li>
+    <li>td: Define los campos donde ira cada dato(pueden llevar cualquier tipo de dato)</li>
     <li>
         <div class="example-table">
             <table>
@@ -15,6 +18,26 @@
                     <td>Cortez</td>
                     <td>20</td>
                 </tr>
+            </table>
+        </div>
+    </li>
+    <li>
+        <p>thead: Sirve para organizar de una mejor forma, demoninando cual es la cabecera de la tabla <br>
+        tbody: Tambien es para organizar mejor mostrando cuale es la secion donde van los campos con datos</p>
+        <div class="example-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ciudad</th>
+                        <th>N° Habitantes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demasia</td>
+                        <td>10.000</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </li>
