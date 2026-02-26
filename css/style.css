@@ -4,3 +4,28 @@ html {
 body{
     background-color: 	#2c2f33;
 }
+
+h3{
+  background-color: blue; /*Sirve para poner el color de fondo del elemento*/
+  font-family: Arial, Helvetica, sans-serif; /*sirve para definir la fuente de la letra*/
+}
+p{
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white; /*sirve para cambiar el color del texto*/
+
+}
+ul{
+  list-style: none; /*sirve para definir el estilo de la viñeta*/
+  margin: 16px 0;
+  padding: 0;
+}
+
+li{
+  margin: 10px 0;
+}
+
+.example{
+  border-radius: 12px;
+  padding: 14px;
+}
