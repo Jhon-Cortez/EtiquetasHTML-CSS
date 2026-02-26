@@ -16,8 +16,8 @@ p{
 
 }
 ul{
-  list-style: none; /*sirve para definir el estilo de la viñeta*/
-  margin: 16px 0;
+  list-style: none; /*sirve para definir el estilo de la viñeta de una lista*/
+  margin: 16px 0; 
   padding: 0;
 }
 
