@@ -200,3 +200,37 @@ p {
   background: #5971ca;
   transform: translateY(-1px);
 }
+/* CONTENEDOR DE LA TABLA */
+.example-table {
+    margin: 10px 0;
+    overflow-x: auto;
+}
+
+/* TABLA */
+.example-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ENCABEZADOS */
+.example-table th {
+    background: #7289da;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* CELDAS */
+.example-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* FILA HOVER */
+.example-table tr:hover td {
+    background: #f5f7ff;
+}
