@@ -1,33 +1,70 @@
+/* NOTA:
+   - padding = espacio interno
+   - margin  = espacio externo
+   - border-radius = esquinas redondeadas
+   - display:flex + align-items/justify-content = centrar y acomodar con Flexbox
+*/
+
 #titulo-header {
   display: flex;
-  font-size: xx-large;
-  background-color:#7289da;
+  /* Activa Flexbox */
   align-items: center;
+  /* Centra vertical */
   justify-content: center;
-  margin: 0 auto;     
-  max-width: 1200px;   
+  /* Centra horizontal */
+
+  font-size: xx-large;
+  /* Tamaño del título */
+  background-color: #7289da;
+  /* Fondo del header */
+
+  max-width: 1200px;
+  /* Límite de ancho */
   width: 100%;
+  /* Ocupar ancho disponible */
+  margin: 0 auto;
+  /* Centrar el bloque */
+
   padding: 10px 20px;
   border-radius: 10px;
 }
+
 #nav {
   display: flex;
+  /* Menú en fila */
   justify-content: center;
-  flex-wrap: wrap; 
+  /* Centrar opciones */
+  flex-wrap: wrap;
+  /* Permite que bajen a otra línea */
   gap: 12px;
+  /* Espacio entre botones */
+
   list-style: none;
+  /* Quita viñetas */
   padding: 0;
+  /* Quita sangría del ul */
   margin-top: 10px;
+  /* Separación con el header */
 }
+
 .nav-option {
-  background:#7289da;
+  display: inline-block;
+  /* Permite padding y buen tamaño en enlaces */
+  text-decoration: none;
+  /* Quita subrayado */
+
+  background: #7289da;
+  /* Fondo de cada opción */
+  color: black;
+  /* Color del texto */
+  font-weight: 500;
+  /* Grosor del texto */
+
   padding: 8px 20px;
   border-radius: 10px;
-  display: inline-block;
-  text-decoration: none; 
-  color: black;
-  font-weight: 500;
 }
+
 .nav-option:hover {
-  background:#5971ca;
+  background: #5971ca;
+  /* Color al pasar el mouse */
 }

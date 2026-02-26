@@ -1,31 +1,201 @@
 html {
   scroll-behavior: smooth;
-}
-body{
-    background-color: 	#2c2f33;
+  /* Desplazamiento suave al usar #anclas */
 }
 
-h3{
-  background-color: blue; /*Sirve para poner el color de fondo del elemento*/
-  font-family: Arial, Helvetica, sans-serif; /*sirve para definir la fuente de la letra*/
-}
-p{
-  background-color: black;
+body {
+  background-color: #2c2f33;
+  /* Fondo general */
+  color: azure;
+  /* Color de texto general */
   font-family: Arial, Helvetica, sans-serif;
-  color:white; /*sirve para cambiar el color del texto*/
-
+  /* Fuente general */
 }
-ul{
-  list-style: none; /*sirve para definir el estilo de la viñeta de una lista*/
-  margin: 16px 0; 
+
+/* Títulos de sección */
+h3 {
+  background-color: #7289da;
+  /* Fondo del título */
+  color: white;
+  /* Texto del título */
+  padding: 10px 12px;
+  /* Espacio interno */
+  border-radius: 10px;
+  /* Esquinas redondeadas */
+  margin: 18px 0 10px;
+  /* Separación */
+}
+
+/* Párrafos */
+p {
+  background-color: rgb(236, 228, 228);
+  /* Fondo del párrafo */
+  color: #111;
+  /* Texto oscuro */
+  padding: 12px;
+  /* Espacio interno */
+  border-radius: 10px;
+  /* Esquinas redondeadas */
+  margin: 0 0 14px;
+  /* Separación */
+  line-height: 1.5;
+  /* Mejor lectura */
+}
+
+
+.doc-list {
+  list-style: none;
+  /* Quita viñetas del listado principal */
   padding: 0;
+  /* Quita sangría */
+  margin: 14px 0 24px;
+  /* Separación general */
+  display: grid;
+  /* Ordena en columna con espacios */
+  gap: 12px;
+  /* Espacio entre tarjetas */
 }
 
-li{
-  margin: 10px 0;
+
+.doc-list>li {
+  color: #ffffff;
+  /* lo pone blanco */
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.example{
+
+.doc-list>li strong {
+  color: #ffd6e7;
+  /* rosadito para destacar */
+}
+
+
+.doc-list>li {
+  opacity: 1;
+  /* por si algo lo estaba bajando */
+}
+
+
+.example {
+  background-color: #3b4152;
+  /* Fondo más claro que el body */
+  border: 1px solid rgba(114, 137, 218, 0.55);
+  /* Borde azul suave */
+  color: #ffffff;
+  /* Texto blanco */
   border-radius: 12px;
-  padding: 14px;
+  /* Esquinas redondeadas */
+  padding: 14px 16px;
+  /* Espacio interno */
+  line-height: 1.55;
+  /* Mejor lectura */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  /* Sombra suave */
+  transition: transform 0.15s ease;
+  /* Animación suave */
+  margin-top: 10px;
+  /* Separación del texto del li */
+}
+
+.example:hover {
+  transform: translateY(-2px);
+
+}
+
+
+.example p {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  margin: 6px 0 0;
+}
+
+
+.example h1,
+.example h2,
+.example h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  color: #ffd6e7;
+}
+
+.example hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 10px 0 0;
+}
+
+
+.example ul,
+.example ol {
+  list-style: revert;
+  /* Devuelve viñetas y números */
+  margin: 8px 0 0 18px;
+  /* Sangría normal */
+  padding: 0;
+  display: block;
+  /* Evita heredar grid */
+  gap: 0;
+}
+
+.example li {
+  margin: 4px 0;
+  /* Separación de los items internos */
+}
+
+
+.example dl {
+  margin: 8px 0 0;
+}
+
+.example dt {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.example dd {
+  margin-left: 18px;
+  opacity: .9;
+}
+
+#titulo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  background-color: #7289da;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.nav-option {
+  display: inline-block;
+  text-decoration: none;
+  background: #7289da;
+  color: white;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 10px;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.nav-option:hover {
+  background: #5971ca;
+  transform: translateY(-1px);
 }
