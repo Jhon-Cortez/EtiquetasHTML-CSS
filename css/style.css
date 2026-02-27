@@ -200,37 +200,133 @@ p {
   background: #5971ca;
   transform: translateY(-1px);
 }
-/* CONTENEDOR DE LA TABLA */
-.example-table {
-    margin: 10px 0;
-    overflow-x: auto;
+
+
+/*form*/
+
+/* ===== FORM (estilo pro, coherente con tu tema) ===== */
+form {
+  max-width: 700px;
+  margin: 16px auto;
+  padding: 18px;
+  background-color: #3b4152;
+  border: 1px solid rgba(114, 137, 218, .55);
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .28);
 }
 
-/* TABLA */
-.example-table table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+/* Agrupación */
+fieldset {
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 0;
 }
 
-/* ENCABEZADOS */
-.example-table th {
-    background: #7289da;
-    color: white;
-    padding: 10px;
-    text-align: left;
+legend {
+  padding: 0 10px;
+  color: #ffd6e7;
+  font-weight: 700;
 }
 
-/* CELDAS */
-.example-table td {
-    padding: 10px;
-    border-bottom: 1px solid #e0e0e0;
+/* Labels */
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-/* FILA HOVER */
-.example-table tr:hover td {
-    background: #f5f7ff;
+/* Inputs, Select, Textarea */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  background-color: #2c2f33;
+  color: #ffffff;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* Textarea mejor */
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Focus (cuando haces click) */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #7289da;
+  box-shadow: 0 0 0 3px rgba(114, 137, 218, .25);
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, .55);
+}
+
+/* Radios y checkbox (no ocupar todo el ancho) */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  transform: translateY(1px);
+}
+
+/* Filas para radio/checkbox */
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.form-row label {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .9);
+}
+
+/* Línea separadora dentro del form */
+form hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, .15);
+  margin: 16px 0;
+}
+
+/* Botones */
+button,
+input[type="submit"] {
+  background: #7289da;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .15s ease, transform .12s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #5971ca;
+  transform: translateY(-1px);
+}
+
+/* Botón reset (si lo usas) */
+button[type="reset"] {
+  background: rgba(255, 255, 255, .12);
+}
+
+button[type="reset"]:hover {
+  background: rgba(255, 255, 255, .18);
 }
