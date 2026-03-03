@@ -74,24 +74,24 @@
 </ul>
 
 
-<form action="/enviar" method="post" enctype="multipart/form-data">
+<form action="*" method="post" enctype="multipart/form-data">
 
     <fieldset>
         <legend>Datos básicos</legend>
         <label for="nombre">Nombre</label>
-        <input id="nombre" name="nombre" type="text" value="Brayan" required>
+        <input id="nombre" name="nombre" type="text" value="" required>
         <br><br>
         <label for="correo">Correo</label>
-        <input id="correo" name="correo" type="email" value="brayan@gmail.com" required>
+        <input id="correo" name="correo" type="email" value="" required>
         <br><br>
         <label for="clave">Contraseña</label>
-        <input id="clave" name="clave" type="password" value="123456" required>
+        <input id="clave" name="clave" type="password" value="" required>
         <br><br>
         <label for="edad">Edad</label>
-        <input id="edad" name="edad" type="number" value="19" min="1" max="120">
+        <input id="edad" name="edad" type="number" value="" min="1" max="120">
         <br><br>
         <label for="fecha">Fecha de nacimiento</label>
-        <input id="fecha" name="fecha_nacimiento" type="date" value="2006-05-12">
+        <input id="fecha" name="fecha_nacimiento" type="date" value="">
         <hr>
         <label>Género</label>
         <br>
@@ -101,7 +101,7 @@
         <hr>
         <label>Intereses</label>
         <br>
-        <label><input type="checkbox" name="intereses" value="programacion" checked> Programación</label>
+        <label><input type="checkbox" name="intereses" value="programacion"> Programación</label>
         <br>
         <label><input type="checkbox" name="intereses" value="diseno"> Diseño</label>
         <hr>
@@ -109,21 +109,18 @@
         <select id="ciudad" name="ciudad" required>
             <option value="">Seleccione...</option>
             <option value="bogota">Bogotá</option>
-            <option value="medellin" selected>Medellín</option>
+            <option value="medellin">Medellín</option>
             <option value="cali">Cali</option>
         </select>
         <br><br>
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="4">Hola, este es mi mensaje.</textarea>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
         <hr>
         <label for="archivo">Subir archivo</label>
         <input id="archivo" name="archivo" type="file" accept=".pdf,.jpg,.png">
         <hr>
         <button type="submit">Enviar</button>
         <button type="reset">Limpiar</button>
-
-
-        <!-- <input type="submit" value="Enviar"> -->
 
     </fieldset>
 </form>

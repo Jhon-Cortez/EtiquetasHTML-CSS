@@ -1,121 +1,163 @@
-html, body {
-  overflow-x: hidden;
-}
-html {
-  scroll-behavior: smooth;
-  /* Desplazamiento suave al usar #anclas */
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-body {
-  background-color: #2c2f33;
-  /* Fondo general */
-  color: azure;
-  /* Color de texto general */
-  font-family: Arial, Helvetica, sans-serif;
-  /* Fuente general */
+/* NOTA:
+   - padding = espacio interno
+   - margin  = espacio externo
+   - border-radius = esquinas redondeadas
+   - display:flex + align-items/justify-content = centrar y acomodar con Flexbox
+*/
+
+/* ===== RESET SEGURO ===== */
+* {
+  box-sizing: border-box;
 }
 
-/* Títulos de sección */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #2c2f33;
+  color: azure;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== HEADER ===== */
+
+header {
+  width: 100%;
+}
+
+/* TÍTULO */
+#titulo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  background-color: #7289da;
+  max-width: 1200px;
+  width: 100%;
+  margin: 12px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* ===== NAVBAR STICKY (ÚNICO Y LIMPIO) ===== */
+#Contenedor-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(44, 47, 51, 0.98);
+}
+
+/* MENÚ */
+#nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* OPCIONES */
+.nav-option {
+  display: inline-block;
+  text-decoration: none;
+  background: #7289da;
+  color: black;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 10px;
+  transition: background .15s ease;
+}
+
+.nav-option:hover {
+  background: #5971ca;
+}
+
+/* ===== MEDIA ===== */
+
+img,
+video,
+audio {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+iframe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: 300px;
+}
+
+.example img {
+  margin: 10px auto;
+}
+
+/* ===== TEXTOS ===== */
+
 h3 {
   text-align: center;
   background-color: #7289da;
-  /* Fondo del título */
   color: white;
-  /* Texto del título */
   padding: 10px 12px;
-  /* Espacio interno */
   border-radius: 10px;
-  /* Esquinas redondeadas */
   margin: 18px 0 10px;
-  /* Separación */
 }
 
-/* Párrafos */
 p {
   background-color: rgb(236, 228, 228);
-  /* Fondo del párrafo */
   color: #111;
-  /* Texto oscuro */
   padding: 12px;
-  /* Espacio interno */
   border-radius: 10px;
-  /* Esquinas redondeadas */
   margin: 13px 0 14px;
-  /* Separación */
   line-height: 1.5;
-  /* Mejor lectura */
 }
 
+/* ===== LISTAS ===== */
 
 .doc-list {
   list-style: none;
-  /* Quita viñetas del listado principal */
   padding: 0;
-  /* Quita sangría */
   margin: 14px 0 24px;
-  /* Separación general */
   display: grid;
-  /* Ordena en columna con espacios */
   gap: 12px;
-  /* Espacio entre tarjetas */
 }
 
-
-.doc-list>li {
+.doc-list > li {
   color: #ffffff;
-  /* lo pone blanco */
   font-size: 1rem;
   line-height: 1.6;
-}
-
-
-.doc-list>li strong {
-  color: #ffd6e7;
-  /* rosadito para destacar */
-}
-
-
-.doc-list>li {
   opacity: 1;
-  /* por si algo lo estaba bajando */
 }
 
+.doc-list > li strong {
+  color: #ffd6e7;
+}
+
+/* ===== EJEMPLOS ===== */
 
 .example {
   background-color: #3b4152;
-  /* Fondo más claro que el body */
   border: 1px solid rgba(114, 137, 218, 0.55);
-  /* Borde azul suave */
   color: #ffffff;
-  /* Texto blanco */
   border-radius: 12px;
-  /* Esquinas redondeadas */
   padding: 14px 16px;
-  /* Espacio interno */
   line-height: 1.55;
-  /* Mejor lectura */
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-  /* Sombra suave */
   transition: transform 0.15s ease;
-  /* Animación suave */
   margin-top: 10px;
-  /* Separación del texto del li */
 }
 
 .example:hover {
   transform: translateY(-2px);
-
 }
-
 
 .example p {
   background: transparent;
@@ -123,7 +165,6 @@ p {
   padding: 0;
   margin: 6px 0 0;
 }
-
 
 .example h1,
 .example h2,
@@ -140,24 +181,17 @@ p {
   margin: 10px 0 0;
 }
 
-
 .example ul,
 .example ol {
   list-style: revert;
-  /* Devuelve viñetas y números */
   margin: 8px 0 0 18px;
-  /* Sangría normal */
   padding: 0;
   display: block;
-  /* Evita heredar grid */
-  gap: 0;
 }
 
 .example li {
   margin: 4px 0;
-  /* Separación de los items internos */
 }
-
 
 .example dl {
   margin: 8px 0 0;
@@ -173,50 +207,8 @@ p {
   opacity: .9;
 }
 
-#titulo-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: xx-large;
-  background-color: #7289da;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: white;
-}
+/* ===== FORM ===== */
 
-#nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.nav-option {
-  display: inline-block;
-  text-decoration: none;
-  background: #7289da;
-  color: white;
-  font-weight: 600;
-  padding: 8px 20px;
-  border-radius: 10px;
-  transition: background-color 0.15s ease, transform 0.15s ease;
-}
-
-.nav-option:hover {
-  background: #5971ca;
-  transform: translateY(-1px);
-}
-
-
-/*form*/
-
-/* ===== FORM (estilo pro, coherente con tu tema) ===== */
 form {
   max-width: 700px;
   margin: 16px auto;
@@ -227,7 +219,6 @@ form {
   box-shadow: 0 10px 22px rgba(0, 0, 0, .28);
 }
 
-/* Agrupación */
 fieldset {
   border: 1px solid rgba(255, 255, 255, .12);
   border-radius: 12px;
@@ -241,7 +232,6 @@ legend {
   font-weight: 700;
 }
 
-/* Labels */
 label {
   display: block;
   margin: 12px 0 6px;
@@ -249,7 +239,6 @@ label {
   color: #ffffff;
 }
 
-/* Inputs, Select, Textarea */
 input,
 select,
 textarea {
@@ -263,13 +252,11 @@ textarea {
   transition: border-color .15s ease, box-shadow .15s ease;
 }
 
-/* Textarea mejor */
 textarea {
   resize: vertical;
   min-height: 110px;
 }
 
-/* Focus (cuando haces click) */
 input:focus,
 select:focus,
 textarea:focus {
@@ -277,13 +264,11 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(114, 137, 218, .25);
 }
 
-/* Placeholder */
 input::placeholder,
 textarea::placeholder {
   color: rgba(255, 255, 255, .55);
 }
 
-/* Radios y checkbox (no ocupar todo el ancho) */
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
@@ -291,7 +276,6 @@ input[type="checkbox"] {
   transform: translateY(1px);
 }
 
-/* Filas para radio/checkbox */
 .form-row {
   display: flex;
   gap: 16px;
@@ -307,7 +291,6 @@ input[type="checkbox"] {
   color: rgba(255, 255, 255, .9);
 }
 
-/* Línea separadora dentro del form */
 form hr {
   border: none;
   height: 1px;
@@ -315,7 +298,6 @@ form hr {
   margin: 16px 0;
 }
 
-/* Botones */
 button,
 input[type="submit"] {
   background: #7289da;
@@ -334,7 +316,6 @@ input[type="submit"]:hover {
   transform: translateY(-1px);
 }
 
-/* Botón reset (si lo usas) */
 button[type="reset"] {
   background: rgba(255, 255, 255, .12);
 }
@@ -343,24 +324,20 @@ button[type="reset"]:hover {
   background: rgba(255, 255, 255, .18);
 }
 
+/* ===== TABLA ===== */
 
-/* CONTENEDOR DE LA TABLA */
 .example-table {
   margin: 10px 0;
-  overflow-x: hidden;
 }
 
-/* TABLA */
 .example-table table {
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
   border-radius: 8px;
-  overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ENCABEZADOS */
 .example-table th {
   background: #7289da;
   color: white;
@@ -368,26 +345,31 @@ button[type="reset"]:hover {
   text-align: left;
 }
 
-/* CELDAS */
 .example-table td {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
-  color: #111; /* 👈 AÑADE ESTO */
+  color: #111;
 }
 
-/* FILA HOVER */
 .example-table tr:hover td {
   background: #f5f7ff;
 }
 
+/* ===== IMG UTIL ===== */
 
-/*img*/
 .centrada {
   display: block;
   margin: 0 auto;
   width: 100%;
-  /* ajusta a tu gusto */
   height: auto;
-  /* mantiene proporción */
   max-width: 100%;
+}
+/* Ocultar todas las secciones */
+section {
+  display: none;
+}
+
+/* Mostrar la activa */
+section.activa {
+  display: block;
 }
