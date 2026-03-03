@@ -80,13 +80,18 @@ header {
 /* ===== MEDIA ===== */
 
 img,
-video,
-audio {
+video {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
   height: auto;
+}
+audio{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 iframe{
   display: block;

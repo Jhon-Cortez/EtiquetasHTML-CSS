@@ -1,4 +1,4 @@
-// 🔹 función para cargar html
+//función para cargar html
 function cargarHTML(url, contenedorId) {
   return fetch(url)
     .then(res => res.text())
@@ -8,7 +8,7 @@ function cargarHTML(url, contenedorId) {
     .catch(err => console.error(`Error cargando ${url}:`, err));
 }
 
-// 🔹 cargar todo
+// cargar todo
 Promise.all([
   cargarHTML('./pages/header.html', 'header-container'),
   cargarHTML('./pages/footer.html', 'footer-container'),
@@ -18,7 +18,7 @@ Promise.all([
   cargarHTML('./pages/tablas.html', 'tablas-container'),
   cargarHTML('./pages/multimedia.html', 'multimedia-container')
 ]).then(() => {
-  // ✅ AQUÍ ya existe el header
+  // ya existe el header
 
   const links = document.querySelectorAll('.nav-option');
   const sections = document.querySelectorAll('section');
