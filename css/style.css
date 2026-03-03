@@ -1,8 +1,20 @@
+html, body {
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
   /* Desplazamiento suave al usar #anclas */
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 body {
   background-color: #2c2f33;
   /* Fondo general */
@@ -335,7 +347,7 @@ button[type="reset"]:hover {
 /* CONTENEDOR DE LA TABLA */
 .example-table {
   margin: 10px 0;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 /* TABLA */
@@ -360,6 +372,7 @@ button[type="reset"]:hover {
 .example-table td {
   padding: 10px;
   border-bottom: 1px solid #e0e0e0;
+  color: #111; /* 👈 AÑADE ESTO */
 }
 
 /* FILA HOVER */
@@ -372,7 +385,7 @@ button[type="reset"]:hover {
 .centrada {
   display: block;
   margin: 0 auto;
-  width: 620px;
+  width: 100%;
   /* ajusta a tu gusto */
   height: auto;
   /* mantiene proporción */
