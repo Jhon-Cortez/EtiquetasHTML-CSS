@@ -366,3 +366,15 @@ button[type="reset"]:hover {
 .example-table tr:hover td {
   background: #f5f7ff;
 }
+
+
+/*img*/
+.centrada {
+  display: block;
+  margin: 0 auto;
+  width: 620px;
+  /* ajusta a tu gusto */
+  height: auto;
+  /* mantiene proporción */
+  max-width: 100%;
+}
