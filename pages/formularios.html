@@ -1,7 +1,9 @@
+<!-- Página con explicaciones y ejemplos de formularios -->
 <h3>Formularios</h3>
 <p>En HTML los formularios sirven para recoger informacion del usuario y enviarla o procesarla. Esta sección va dirigida a los formularios, cada uno con su respectiva explicación</p>
 
 <ul>
+    <!-- lista de descripciones de etiquetas de formulario -->
     <li>
         <div class="example">
             form: agrupar campos y enviar datos.
@@ -74,63 +76,63 @@
 </ul>
 
 
-<form id="hformulario" action="#" method="post" enctype="multipart/form-data">
+<form id="hformulario" action="#" method="post" enctype="multipart/form-data"> <!-- formulario con id, acción ficticia y soporte para archivos -->
 
-    <fieldset>
-        <legend>Datos básicos</legend>
+    <fieldset> <!-- agrupa campos relacionados -->
+        <legend>Datos básicos</legend> <!-- título del grupo de campos -->
 
-        <label for="nombre">Nombre</label>
-        <input id="nombre" name="nombre" type="text" required>
+        <label for="nombre">Nombre</label> <!-- etiqueta asociada al campo nombre -->
+        <input id="nombre" name="nombre" type="text" required> <!-- campo de texto obligatorio -->
         <br><br>
 
-        <label for="correo">Correo</label>
-        <input id="correo" name="correo" type="email" required>
+        <label for="correo">Correo</label> <!-- etiqueta asociada al campo correo -->
+        <input id="correo" name="correo" type="email" required> <!-- campo email con validación básica -->
         <br><br>
 
-        <label for="clave">Contraseña</label>
-        <input id="clave" name="clave" type="password" required>
+        <label for="clave">Contraseña</label> <!-- etiqueta para contraseña -->
+        <input id="clave" name="clave" type="password" required> <!-- campo de contraseña oculto -->
         <br><br>
 
-        <label for="edad">Edad</label>
-        <input id="edad" name="edad" type="number" min="1" max="120">
+        <label for="edad">Edad</label> <!-- etiqueta para edad -->
+        <input id="edad" name="edad" type="number" min="1" max="120"> <!-- campo numérico con límites -->
         <br><br>
 
-        <label for="fecha">Fecha de nacimiento</label>
-        <input id="fecha" name="fecha_nacimiento" type="date">
+        <label for="fecha">Fecha de nacimiento</label> <!-- etiqueta para fecha -->
+        <input id="fecha" name="fecha_nacimiento" type="date"> <!-- campo de selección de fecha -->
         <hr>
 
-        <label>Género</label><br>
-        <label><input type="radio" name="genero" value="m" checked> Masculino</label><br>
-        <label><input type="radio" name="genero" value="f"> Femenino</label>
+        <label>Género</label><br> <!-- conjunto de botones de opción -->
+        <label><input type="radio" name="genero" value="m" checked> Masculino</label><br> <!-- opción masculino -->
+        <label><input type="radio" name="genero" value="f"> Femenino</label> <!-- opción femenino -->
         <hr>
 
-        <label>Intereses</label><br>
-        <label><input type="checkbox" name="intereses[]" value="programacion"> Programación</label><br>
-        <label><input type="checkbox" name="intereses[]" value="diseno"> Diseño</label>
+        <label>Intereses</label><br> <!-- conjunto de casillas de verificación -->
+        <label><input type="checkbox" name="intereses[]" value="programacion"> Programación</label><br> <!-- interés programación -->
+        <label><input type="checkbox" name="intereses[]" value="diseno"> Diseño</label> <!-- interés diseño -->
         <hr>
 
-        <label for="ciudad">Ciudad</label>
+        <label for="ciudad">Ciudad</label> <!-- campo de selección de ciudad -->
         <select id="ciudad" name="ciudad" required>
-            <option value="">Seleccione...</option>
-            <option value="bogota">Bogotá</option>
+            <option value="">Seleccione...</option> <!-- opción por defecto -->
+            <option value="bogota">Bogotá</option> <!-- primera ciudad -->
             <option value="medellin">Medellín</option>
             <option value="cali">Cali</option>
         </select>
         <br><br>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        <label for="mensaje">Mensaje</label> <!-- etiqueta para textarea -->
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea> <!-- área de texto para comentarios -->
         <hr>
 
-        <label for="archivo">Subir archivo</label>
-        <input id="archivo" name="archivo" type="file" accept=".pdf,.jpg,.png">
+        <label for="archivo">Subir archivo</label> <!-- etiqueta para campo file -->
+        <input id="archivo" name="archivo" type="file" accept=".pdf,.jpg,.png"> <!-- selecciona archivos permitidos -->
         <hr>
 
-        <button type="submit">Enviar</button>
-        <button type="reset">Limpiar</button>
+        <button type="submit">Enviar</button> <!-- botón para enviar formulario -->
+        <button type="reset">Limpiar</button> <!-- botón para resetear formulario -->
 
         <!--  Mensaje -->
-        <p id="msg" style="display:none; margin-top:12px; font-weight:600;"></p>
+        <p id="msg" style="display:none; margin-top:12px; font-weight:600;"></p> <!-- área donde se muestra confirmación -->
 
     </fieldset>
 </form>
