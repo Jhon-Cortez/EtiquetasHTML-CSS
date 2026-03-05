@@ -1,11 +1,5 @@
-/* NOTA:
-   - padding = espacio interno
-   - margin  = espacio externo
-   - border-radius = esquinas redondeadas
-   - display:flex + align-items/justify-content = centrar y acomodar con Flexbox
-*/
-
 /* ===== RESET SEGURO ===== */
+
 * {
   box-sizing: border-box;
 }
@@ -28,6 +22,7 @@ header {
 }
 
 /* TÍTULO */
+
 #titulo-header {
   display: flex;
   align-items: center;
@@ -42,7 +37,8 @@ header {
   color: white;
 }
 
-/* ===== NAVBAR STICKY (ÚNICO Y LIMPIO) ===== */
+/* ===== NAVBAR STICKY ===== */
+
 #Contenedor-nav {
   position: sticky;
   top: 0;
@@ -51,6 +47,7 @@ header {
 }
 
 /* MENÚ */
+
 #nav {
   display: flex;
   justify-content: center;
@@ -62,6 +59,7 @@ header {
 }
 
 /* OPCIONES */
+
 .nav-option {
   display: inline-block;
   text-decoration: none;
@@ -77,31 +75,29 @@ header {
   background: #5971ca;
 }
 
-/* ===== MEDIA ===== */
+/* ===== MULTIMEDIA RESPONSIVE ===== */
 
 img,
 video {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 100%;
   height: auto;
-}
-audio{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-iframe{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: 300px;
+  margin: 10px auto;
 }
 
-.example img {
+audio {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 10px auto;
+}
+
+iframe {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
   margin: 10px auto;
 }
 
@@ -135,14 +131,14 @@ p {
   gap: 12px;
 }
 
-.doc-list > li {
+.doc-list li {
+  list-style: none;
   color: #ffffff;
   font-size: 1rem;
   line-height: 1.6;
-  opacity: 1;
 }
 
-.doc-list > li strong {
+.doc-list li strong {
   color: #ffd6e7;
 }
 
@@ -157,7 +153,8 @@ p {
   line-height: 1.55;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
   transition: transform 0.15s ease;
-  margin-top: 10px;
+  margin: 15px auto;
+  max-width: 900px;
 }
 
 .example:hover {
@@ -369,12 +366,114 @@ button[type="reset"]:hover {
   height: auto;
   max-width: 100%;
 }
-/* Ocultar todas las secciones */
+
+/* ===== SECCIONES DINÁMICAS ===== */
+
 section {
   display: none;
 }
 
-/* Mostrar la activa */
 section.activa {
   display: block;
+}
+/* Reset básico */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Estilos generales */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:20px;
+}
+
+/* Contenedor principal */
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+/* Título */
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* LISTA SIN VIÑETAS */
+.doc-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+/* Cada elemento */
+.doc-list li{
+    list-style:none;
+    width:100%;
+    max-width:500px;
+}
+
+/* Tarjeta */
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+/* Hover */
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Link */
+.card a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
+
+/* Responsive */
+@media (max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .card{
+        padding:15px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+}
+/* quitar viñetas */
+.doc-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.doc-list li{
+    list-style: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    list-style: none;
 }
