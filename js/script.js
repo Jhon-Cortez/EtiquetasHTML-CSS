@@ -43,3 +43,23 @@ Promise.all([
     });
   });
 });
+
+
+// Formulario funcional
+document.addEventListener("submit", (e) => {
+  const form = e.target;
+
+  // Solo aplica al form que tú quieres
+  if (!(form instanceof HTMLFormElement) || form.id !== "hformulario") return;
+
+  e.preventDefault();
+
+  const msg = form.querySelector("#msg");
+  if (msg) {
+    msg.textContent = "Formulario enviado correctamente.";
+    msg.style.display = "block";
+    setTimeout(() => (msg.style.display = "none"), 3000);
+  }
+
+  form.reset(); // limpia el formulario
+});

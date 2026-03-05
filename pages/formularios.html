@@ -74,37 +74,41 @@
 </ul>
 
 
-<form action="*" method="post" enctype="multipart/form-data">
+<form id="hformulario" action="#" method="post" enctype="multipart/form-data">
 
     <fieldset>
         <legend>Datos básicos</legend>
+
         <label for="nombre">Nombre</label>
-        <input id="nombre" name="nombre" type="text" value="" required>
+        <input id="nombre" name="nombre" type="text" required>
         <br><br>
+
         <label for="correo">Correo</label>
-        <input id="correo" name="correo" type="email" value="" required>
+        <input id="correo" name="correo" type="email" required>
         <br><br>
+
         <label for="clave">Contraseña</label>
-        <input id="clave" name="clave" type="password" value="" required>
+        <input id="clave" name="clave" type="password" required>
         <br><br>
+
         <label for="edad">Edad</label>
-        <input id="edad" name="edad" type="number" value="" min="1" max="120">
+        <input id="edad" name="edad" type="number" min="1" max="120">
         <br><br>
+
         <label for="fecha">Fecha de nacimiento</label>
-        <input id="fecha" name="fecha_nacimiento" type="date" value="">
+        <input id="fecha" name="fecha_nacimiento" type="date">
         <hr>
-        <label>Género</label>
-        <br>
-        <label><input type="radio" name="genero" value="m" checked> Masculino</label>
-        <br>
+
+        <label>Género</label><br>
+        <label><input type="radio" name="genero" value="m" checked> Masculino</label><br>
         <label><input type="radio" name="genero" value="f"> Femenino</label>
         <hr>
-        <label>Intereses</label>
-        <br>
-        <label><input type="checkbox" name="intereses" value="programacion"> Programación</label>
-        <br>
-        <label><input type="checkbox" name="intereses" value="diseno"> Diseño</label>
+
+        <label>Intereses</label><br>
+        <label><input type="checkbox" name="intereses[]" value="programacion"> Programación</label><br>
+        <label><input type="checkbox" name="intereses[]" value="diseno"> Diseño</label>
         <hr>
+
         <label for="ciudad">Ciudad</label>
         <select id="ciudad" name="ciudad" required>
             <option value="">Seleccione...</option>
@@ -113,14 +117,20 @@
             <option value="cali">Cali</option>
         </select>
         <br><br>
+
         <label for="mensaje">Mensaje</label>
         <textarea id="mensaje" name="mensaje" rows="4"></textarea>
         <hr>
+
         <label for="archivo">Subir archivo</label>
         <input id="archivo" name="archivo" type="file" accept=".pdf,.jpg,.png">
         <hr>
+
         <button type="submit">Enviar</button>
         <button type="reset">Limpiar</button>
+
+        <!--  Mensaje -->
+        <p id="msg" style="display:none; margin-top:12px; font-weight:600;"></p>
 
     </fieldset>
 </form>
